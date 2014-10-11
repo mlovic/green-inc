@@ -3,7 +3,7 @@ class AlbumsController < ApplicationController
   end
 
   def index
-    @albums = Album.all.photos.first
+    @albums = Album.all
   end
 
   def show
