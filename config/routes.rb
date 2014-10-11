@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'static_pages#about' 
+  root 'static_pages#test' 
   resources :photos
   resources :albums
   get  'static_pages/about'
