@@ -26,11 +26,11 @@ body{
 .wrapper{
 	position: relative;
 	width: 100%;
-	background-image: url(../img/sf.jpg);
+	background-image: image-url("pedz_img/sf.jpg");
 }
 
 .wrapper2{
-	background-image: url(../img/ny.jpg);
+	background-image: image-url("pedz_img/ny.jpg");
 }
 
 .category{
