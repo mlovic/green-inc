@@ -3,10 +3,11 @@ class AlbumsController < ApplicationController
   end
 
   def index
-    @albums = Album.all.images.first
+    @albums = Album.all.photos.first
   end
 
   def show
-    @images
+    @album = Album.find(params[:id])
+    @photos = @album.photos.all
   end
 end
