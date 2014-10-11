@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'albums/new'
+
+  get 'photos/new'
+
   root 'static_pages#about'
 
   get  'static_pages/about'
