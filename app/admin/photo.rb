@@ -19,6 +19,13 @@ ActiveAdmin.register Photo do
     end
   end
 
+  index do 
+    id_column
+    column :image do |photo|
+      image_tag photo.image.url(:thumb)
+    end
+  end
+
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
