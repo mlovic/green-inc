@@ -22,7 +22,7 @@ ActiveAdmin.register Photo do
   index do 
     id_column
     column :image do |photo|
-      image_tag photo.image.url(:thumb)
+      link_to image_tag(photo.image.url(:thumb)), admin_photo_path(photo)
     end
   end
 

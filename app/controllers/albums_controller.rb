@@ -10,6 +10,10 @@ class AlbumsController < ApplicationController
   def show
     @album = Album.find(params[:id])
     @photos = @album.photos.all
+    @images = []
+    @photos.each do |p|
+      @images.push(p.image)
+    end
   end
 
   def create
