@@ -2,27 +2,40 @@
 // All this logic will automatically be available in application.js.
 // You can use CoffeeScript in this file: http://coffeescript.org/
 
-		// DIV HEIGHT
+        // DIV DIMENSIONS
 
 $(document).ready(function() {
-	var hWindow = $(window).height();
-	$('.slider_wrap').height(hWindow);
-	$('.wrapper').height(hWindow);
-	$('.category').height(hWindow);
-	var wWindow = $(window).width();
-	$('.wrapper').width(wWindow);
+    var hWindow = $(window).height();
+    $('.slider_wrap').height(hWindow);
+    $('.wrapper').height(hWindow);
+    $('.category').height(hWindow);
+    var wWindow = $(window).width();
+    $('.wrapper').width(wWindow);
 });
 
 $(window).resize(function() {
-	var hWindow = $(window).height();
-	$('.slider_wrap').height(hWindow);
-	$('.wrapper').height(hWindow);
-	$('.category').height(hWindow);
-	var wWindow = $(window).width();
-	$('.wrapper').width(wWindow);
+    var hWindow = $(window).height();
+    $('.slider_wrap').height(hWindow);
+    $('.wrapper').height(hWindow);
+    $('.category').height(hWindow);
+    var wWindow = $(window).width();
+    $('.wrapper').width(wWindow);
 });
 
-		// SLIDER
+        // VIEW BUTTON ANIMATION
+
+$('.view').mouseenter(function() {
+    $('.view .ph').addClass('animated bounceOutLeft');
+    $('.view .click').addClass('animated bounceInRight');
+});
+
+$('.view').mouseleave(function() {
+    $('.view .click').addClass('animated bounceOutLeft');
+    $('.view .ph').addClass('animated bounceInRight');
+});
+
+
+        // SLIDER
 
 $(window).load(function(){
 
@@ -53,6 +66,8 @@ $(window).load(function(){
     $(".slider").width(totalWidth);
     $(".item:first").addClass("item--active");
 
+        // SLIDER CONTROLLERS
+
     $(".prev_post").click(function(){
         var $targetItem = $(".item--active").prev();
         sliderMove($targetItem);
@@ -62,7 +77,19 @@ $(window).load(function(){
         var $targetItem = $(".item--active").next();
         sliderMove($targetItem);
     });
-    $(window).scroll(function(event) {
-    	/* Act on the event */
+
+        // MOUSE CONTROLLERS
+
+    $(document).on('DOMMouseScroll mousewheel', function (e) {
+      if(e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0) {
+        var $targetItem = $(".item--active").next();
+        sliderMove($targetItem);
+      } else {
+        var $targetItem = $(".item--active").prev();
+        sliderMove($targetItem);      }
+
+      return false;
     });
+    
 });
+
