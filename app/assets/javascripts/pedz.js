@@ -24,6 +24,8 @@ $(window).resize(function() {
 
         // VIEW BUTTON ANIMATION
 
+/* THIS IS A FUCKING MESS, DISABLED UNTIL I FIND AN ANIMATION I LIKE
+
 $('.view').mouseenter(function() {
     $('.view .ph').addClass('animated bounceOutLeft');
     $('.view .click').addClass('animated bounceInRight');
@@ -34,6 +36,8 @@ $('.view').mouseleave(function() {
     $('.view .ph').addClass('animated bounceInRight');
 });
 
+
+*/
 
         // SLIDER
 
