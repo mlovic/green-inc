@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby  '2.1.2'
 
 gem 'rails', '4.1.6'
 gem 'sass-rails', '~> 4.0.3'
@@ -20,6 +21,7 @@ end
 group :production do
   gem 'pg'
   gem 'rails_12factor'
+  gem 'unicorn'
 end
 
 # gem 'therubyracer',  platforms: :ruby
