@@ -12,14 +12,13 @@ gem 'paperclip', '~> 4.2'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
+gem 'pg'
 
 group :development, :test do
-  gem 'sqlite3'
   gem 'spring'
 end
 
 group :production do
-  gem 'pg'
   gem 'rails_12factor'
   gem 'unicorn'
 end
