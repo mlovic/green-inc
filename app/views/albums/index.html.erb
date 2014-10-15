@@ -1,44 +1,41 @@
+
+<%= render 'albums/menu' %>
 <div class="slider_wrap">
   <div class="slider">
     <div class="item">
-		<div class="wrapper">
-				<div class="category">
-					<span class="prev_post">
-						<%= @albums[0].name %>
-					</span>
-					<span class="next_post">
-						September 2014
-					</span>
-					<%= link_to(album_path(1)) do %>
-					  <div class="view">
-						  <h3 class="ph">View Album</h3>
-						  <h3 class="click">Click</h3>
-					  </div>
-					<% end %>
-					</a>
-					<h2>
-						October 2014
-					</h2>
-				</div>
-			</div>
+      <div class="wrapper">
+	<div class="category">
+	  <span class="prev_post">
+	    <%= @albums[0].name %>
+	  </span>
+	  <span class="next_post">
+	    September 2014
+	  </span>
+	  <%= link_to(album_path(1)) do %>
+	    <div class="view">
+	    <h3 class="ph">View Album</h3>
+	    <h3 class="click">Click</h3>
 	    </div>
-	    <div class="item">
-		<div class="wrapper wrapper2">
-				<div class="category">
-					<span class="prev_post">
-						October 2014
-					</span>
-					<span class="next_post">
-						July 2014
-					</span>
-					<h2>
-						September 2014
-					</h2>
-				</div>
-			</div>
-	    </div>
+	  <% end %>
+	<h2>
+	  October 2014
+	</h2>
+      </div>
+    </div>
+    <div class="item">
+      <div class="wrapper wrapper2">
+	<div class="category">
+	  <span class="prev_post">
+	    October 2014
+	  </span>
+	  <span class="next_post">
+	    July 2014
+	  </span>
+	  <h2>
+	    September 2014
+	  </h2>
+	</div>
+      </div>
+    </div>
   </div>
 </div>
-
-
-		

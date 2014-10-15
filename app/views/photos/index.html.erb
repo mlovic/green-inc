@@ -1,1 +1,3 @@
-<%= image_tag @photos.last.image.url %>
+<%= @photos.each do |p| %>
+  <%= image_tag p.image.url(:thumb) %>
+<%  end %>

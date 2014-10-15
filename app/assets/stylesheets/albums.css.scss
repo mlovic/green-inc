@@ -1,3 +1,33 @@
 // Place all the styles related to the Albums controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+    /* MENU */
+#menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-top: 15px;
+  padding-right: 15px;
+  width: 165px;
+  height: 150px;
+  z-index: 2;
+  color: #D9D9D9;
+  font-weight: bold;
+  a {
+    color: #D9D9D9;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .icon {
+    float: right;
+  }
+  ul {
+    /*display: none;*/
+    opacity: 0;
+    line-height: 2em;
+    letter-spacing: 0.1em;
+  }
+}
